@@ -1,5 +1,6 @@
 <?php
 
+use App\Tag;
 use Illuminate\Database\Seeder;
 
 class TagSeeder extends Seeder
@@ -12,7 +13,7 @@ class TagSeeder extends Seeder
     public function run()
     {
         $tags = [
-            'Rock', 'Pop', 'Classica', 'Heavy Metal', 'Jazz', 'House', 'Dance', 'Electronic', 'Acustic', 'Cover',
+            'php', 'Laravel 7', 'VueJs', 'Cucina moderna', 'Piatti tipici', 'Roma', 'Venezia', 'Emilia Romagna', 'Acqua minerale', 'Valle d\'Aosta',
         ];
 
         foreach ($tags as $tag) {
@@ -20,5 +21,6 @@ class TagSeeder extends Seeder
                 'slug'  => Tag::getSlug($tag),
                 'name'  => $tag,
             ]);
+        }
     }
 }
